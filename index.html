@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Native Spoon - Order App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#B22222">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/logo.png" alt="The Native Spoon" id="logo">
+      <div>
+        <h1 id="app-title">The Native Spoon</h1>
+        <p id="slogan">Where Every Meal Tells a Story</p>
+      </div>
+    </div>
+    <div class="lang-toggle">
+      <button id="lang-en" class="active">EN</button>
+      <button id="lang-pg">PG</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-bar">
+      <div>Call Orders: <a href="tel:07069392586">07069392586</a></div>
+      <div>WhatsApp: <a id="wa-link-main" href="#">08135393029</a></div>
+    </section>
+
+    <section class="menu" id="menu">
+      <h2 data-i18n="menu_title">Menu</h2>
+      <div class="categories">
+        <button class="cat active" data-cat="all" data-i18n="all">All</button>
+        <button class="cat" data-cat="breakfast" data-i18n="breakfast">Breakfast</button>
+        <button class="cat" data-cat="lunch" data-i18n="lunch">Lunch</button>
+        <button class="cat" data-cat="night" data-i18n="night">Night</button>
+      </div>
+
+      <div id="items" class="items">
+        <article class="item" data-cat="lunch">
+          <img src="images/menu1.jpg" alt="">
+          <div class="info">
+            <h3 class="item-name">Ofada Rice & Ayamase</h3>
+            <p class="item-price">₦2,500</p>
+            <p class="item-desc">Rich, spicy native sauce with smoked fish.</p>
+            <div class="actions">
+              <button class="speak-order">🎙️ Speak Order</button>
+              <button class="order-btn">Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="breakfast">
+          <img src="images/menu2.jpg" alt="">
+          <div class="info">
+            <h3 class="item-name">Akara & Pap</h3>
+            <p class="item-price">₦1,200</p>
+            <p class="item-desc">Crispy akara with smooth pap.</p>
+            <div class="actions">
+              <button class="speak-order">🎙️ Speak Order</button>
+              <button class="order-btn">Order</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="night">
+          <img src="images/menu3.jpg" alt="">
+          <div class="info">
+            <h3 class="item-name">Pepper Soup</h3>
+            <p class="item-price">₦1,200</p>
+            <p class="item-desc">Hot, peppery and comforting.</p>
+            <div class="actions">
+              <button class="speak-order">🎙️ Speak Order</button>
+              <button class="order-btn">Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="order-panel" id="order-panel">
+      <h2 data-i18n="order_title">Place Your Order</h2>
+      <form id="order-form">
+        <label data-i18n="your_name">Your name</label>
+        <input id="cust-name" type="text" placeholder="Aunty Ngozi">
+
+        <label data-i18n="phone">Phone</label>
+        <input id="cust-phone" type="text" placeholder="0706xxxxxxx">
+
+        <label data-i18n="order_details">Order details</label>
+        <textarea id="order-text" rows="4" placeholder="Tap mic and speak or type"></textarea>
+
+        <div class="controls">
+          <button type="button" id="start-voice">🎤 Speak</button>
+          <button type="button" id="preview-whatsapp">💬 Send via WhatsApp</button>
+        </div>
+
+        <div class="payment-info">
+          <p>Moniepoint – <strong id="acct-number">5975526101</strong> – <em>The Native Spoon</em>
+            <button id="copy-acct">Copy</button>
+          </p>
+        </div>
+      </form>
+    </section>
+
+    <section class="social">
+      <h3 data-i18n="follow_us">Follow us</h3>
+      <div class="social-links">
+        <a id="fb-link" href="#" target="_blank">Facebook: The Native Spoon</a>
+        <a id="ig-link" href="#" target="_blank">Instagram: @thenativespoonph</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; The Native Spoon</p>
+    </footer>
+
+    <a id="float-wa" class="float-wa" href="#" title="Chat on WhatsApp">💬</a>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
